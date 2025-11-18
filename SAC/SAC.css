@@ -1,0 +1,275 @@
+body{
+ font-family: "Montserrat", sans-serif;
+
+
+}
+
+
+
+body,
+html, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =============================== */
+/* AJUSTE GERAL DO SITE */
+/* =============================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* fundo branco */
+    margin: 0;
+    padding: 0;
+}
+
+/* Compensa o header fixo */
+.conteudo-principal-abaixo-menu {
+    margin-top: 113px; /* igual à altura do menu */
+    display: block;
+}
+
+/* =============================== */
+/* NAVBAR FIXA COM BLUR */
+/* =============================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 101%;
+    height: 113px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* =============================== */
+/* LOGO */
+/* =============================== */
+.logo-img {
+    height: 113px;
+    width: auto;
+    display: block;
+}
+
+/* =============================== */
+/* LINKS DO MENU */
+/* =============================== */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.nav-links i {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #777;
+}
+
+/* =============================== */
+/* DROPDOWN MENU */
+/* =============================== */
+.dropdown-menu {
+    display: none !important; /* forçar a ficar escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1001;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Mostrar apenas ao passar o mouse */
+.nav-links li.has-dropdown:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+/* Itens do dropdown */
+.dropdown-menu li {
+    padding: 0 15px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    padding: 8px 0;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+/* =============================== */
+/* UTILITÁRIOS (IDIOMA E BOTÃO CTA) */
+/* =============================== */
+.nav-utility {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.language-selector {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.language-selector:hover {
+    color: black;
+}
+
+.language-selector i {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #777;
+}
+
+.cta-button {
+    background-color: rgb(125, 245, 185);
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px;
+}
+
+.cta-button:hover {
+    background-color: rgb(0, 255, 128);
+    transform: translateY(-2px);
+}
+
+.cta-button i {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover i {
+    transform: translateX(3px);
+}
+
+main{
+    width: 940px;
+    margin: 20px auto;
+    border-radius: 83px;
+    padding: 6px 9px 26px 60px;
+}
+
+form{
+margin: 40px auto;
+}
+ form label form legend{
+display: block;
+font-size: 20px;
+margin: 0 0 10px 0;
+
+}
+.input-padrao{
+display: block;
+margin: 0 0 20px 0;
+padding: 10px 25px;
+width: 50%;
+border-radius: 0vw;
+
+
+}
+
+fieldset{
+    width: 80%;
+}
+
+.enviar{
+width: 40%;
+padding: 15px 0;
+background-color: rgba(236, 95, 255, 0.644);
+color: white;
+font-size: 18px;
+font-weight: bolder;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: 1s;
+text-align: center;
+}
+
+.enviar:hover{
+background-color:rgba(225, 0, 255, 0.644)
+
+
+}
+footer {
+    background: rgb(247, 187, 255);
+    text-align: center;
+   padding: 39px 0;
+    margin-top: 30px;
+    
+}
+
+.logo-footer{
+width: 281px;
+
+
+}
+
+.copy{
+color: #000000;
+font-size: 13px;
+margin: 20px 0;
+
+
+
+}
